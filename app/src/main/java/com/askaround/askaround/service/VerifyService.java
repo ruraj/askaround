@@ -1,5 +1,6 @@
 package com.askaround.askaround.service;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 import org.json.JSONException;
@@ -11,6 +12,12 @@ import org.springframework.web.client.RestTemplate;
  * Created by ruraj on 10/1/16.
  */
 public class VerifyService extends AsyncTask<String, Void, Boolean> {
+
+  private Context context;
+
+  public VerifyService(Context context) {
+    this.context = context;
+  }
 
   @Override
   protected Boolean doInBackground(String... strings) {

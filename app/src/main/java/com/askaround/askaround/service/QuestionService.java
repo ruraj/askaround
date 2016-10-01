@@ -2,25 +2,28 @@ package com.askaround.askaround.service;
 
 import android.os.AsyncTask;
 import android.util.Log;
+import com.askaround.askaround.model.Question;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
+
 /**
  * Created by ruraj on 10/1/16.
  */
-public class QuestionService extends AsyncTask<String, Void, Boolean> {
+public class QuestionService extends AsyncTask<String, Void, Question[]> {
 
   @Override
-  protected Boolean doInBackground(String... strings) {
+  protected Question[] doInBackground(String... strings) {
     String scope = strings[0];
 
     try {
       final String url = scope.equals("my") ? Urls.MY_QUESTIONS_URL : Urls.OTHERS_QUESTIONS_URL;
       RestTemplate restTemplate = new RestTemplate();
       restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-      return restTemplate.getForObject(url, Boolean.class);
+      return restTemplate.getForObject(url, Question[].class);
     } catch (Exception e) {
       Log.e("RegisterService", e.getMessage(), e);
     }
@@ -29,11 +32,6 @@ public class QuestionService extends AsyncTask<String, Void, Boolean> {
   }
 
   @Override
-  protected void onPostExecute(Boolean aBoolean) {
-    if (aBoolean) {
-      // Show code entry box
-    } else {
-      // Show error box
-    }
+  protected void onPostExecute(Question[] questions) {
   }
 }
