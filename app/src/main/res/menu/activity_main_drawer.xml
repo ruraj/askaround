@@ -6,10 +6,6 @@
             android:id="@+id/yourquestionsnav"
             android:icon="@drawable/question"
             android:title="Your Questions" />
-        <item
-            android:id="@+id/settingsnav"
-            android:icon="@drawable/settings"
-            android:title="Settings" />
 
 
     </group>

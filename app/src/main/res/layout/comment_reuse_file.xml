@@ -2,15 +2,34 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
     <TextView
-        android:id="@+id/username"
+        android:id="@+id/comment_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:text="Username20202"
+        android:textStyle="bold"
+
         />
     <TextView
-        android:id="@id/username"
+        android:id="@+id/date"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@id/username"
+        android:layout_alignRight="@id/comment_name"
+        android:layout_alignParentRight="true"
+        android:text="07/01/2199"
+
+        />
+    <TextView
+        android:id="@+id/comm_anwser"
+        android:layout_below="@id/date"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minLines="1"
+        android:maxLines="10"
+        android:lines="3"
+        android:text="The pizza hut on fifth street is the best pizza in town and is certainly also the best pizza hut in the state. On top of that check out jerries pizza pavilion on ninth street which is real dope to."
+
         />
 </RelativeLayout>

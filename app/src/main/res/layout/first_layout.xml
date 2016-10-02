@@ -5,5 +5,8 @@
         android:id="@+id/textview1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Test 01"/>
+        android:textSize="20sp"
+        android:text="Your Question History"
+        android:textAlignment="center"
+        />
 </RelativeLayout>

@@ -86,11 +86,6 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction()
                     .replace(R.id.framer, new FirstLayoutFrag());
             // Handle the camera action
-        } else if (id == R.id.settingsnav) {
-            fragmentManager.beginTransaction()
-                    .replace(R.id.framer, new SecondLayoutFrag());
-
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
