@@ -1,5 +1,8 @@
-package com.askaround.askaround.model;
+package com.example.models;
 
+/**
+ * Created by sibi on 10/1/16.
+ */
 import java.util.Date;
 
 /**
@@ -7,74 +10,79 @@ import java.util.Date;
  */
 public class Question {
 
-  private String title;
-  private String description;
-  private String category;
-  private long responseCount;
+    private String title;
+    private String description;
+    private String category;
 
-  private double lat;
-  private double lon;
-  private String formattedAddress;
+    private String username;
+    private long responseCount;
 
-  private Date datePublished;
+    private double lat;
+    private double lon;
 
-  public String getTitle() {
-    return title;
-  }
+    private Date datePublished;
 
-  public void setTitle(String title) {
-    this.title = title;
-  }
+    public String getTitle() {
+        return title;
+    }
 
-  public String getDescription() {
-    return description;
-  }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-  public void setDescription(String description) {
-    this.description = description;
-  }
+    public String getDescription() {
+        return description;
+    }
 
-  public String getCategory() {
-    return category;
-  }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-  public void setCategory(String category) {
-    this.category = category;
-  }
+    public String getCategory() {
+        return category;
+    }
 
-  public long getResponseCount() {
-    return responseCount;
-  }
+    public String getUsername() {
+        return username;
+    }
 
-  public void setResponseCount(long responseCount) {
-    this.responseCount = responseCount;
-  }
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-  public double getLat() {
-    return lat;
-  }
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
-  public void setLat(double lat) {
-    this.lat = lat;
-  }
+    public long getResponseCount() {
+        return responseCount;
+    }
 
-  public double getLon() {
-    return lon;
-  }
+    public void setResponseCount(long responseCount) {
+        this.responseCount = responseCount;
+    }
 
-  public void setLon(double lon) {
-    this.lon = lon;
-  }
+    public double getLat() {
+        return lat;
+    }
 
-  public Date getDatePublished() {
-    return datePublished;
-  }
+    public void setLat(double lat) {
+        this.lat = lat;
+    }
 
-  public void setDatePublished(Date datePublished) {
-    this.datePublished = datePublished;
-  }
+    public double getLon() {
+        return lon;
+    }
 
-  public String getFormattedAddress() {
-    return formattedAddress;
-  }
+    public void setLon(double lon) {
+        this.lon = lon;
+    }
+
+    public Date getDatePublished() {
+        return datePublished;
+    }
+
+    public void setDatePublished(Date datePublished) {
+        this.datePublished = datePublished;
+    }
 }
