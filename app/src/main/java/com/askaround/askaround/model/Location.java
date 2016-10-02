@@ -1,4 +1,4 @@
-package com.example.models;
+package com.askaround.askaround.model;
 
 import java.util.Date;
 

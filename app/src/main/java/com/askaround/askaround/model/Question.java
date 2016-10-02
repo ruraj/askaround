@@ -1,4 +1,4 @@
-package com.example.models;
+package com.askaround.askaround.model;
 
 /**
  * Created by sibi on 10/1/16.

@@ -13,4 +13,7 @@ public class Urls {
   public static final String OTHERS_QUESTIONS_URL = "/questions/all";
   public static final String POST_QUESTION_URL = "/question/new";
 
+  public static final String POST_KEY_URL = "/key";
+  public static final String POST_LOCATION_URL = "/location";
+  public static final String POST_ANSWER_URL = "/answer";
 }
