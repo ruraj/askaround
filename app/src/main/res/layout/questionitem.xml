@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/title"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="title"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/topper"
+
+        />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_below="@id/title"
+        android:hint="location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"/>
+    <TextView
+
+        android:id="@+id/category"
+        android:layout_below="@id/title"
+        android:hint="category"
+        android:layout_alignRight="@id/location"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/responses"
+        android:hint="responses"
+        android:layout_below="@id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"/>
+    <TextView
+        android:id="@+id/date"
+        android:layout_alignRight="@id/responses"
+        android:layout_width="wrap_content"
+        android:hint="date"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/category"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:id="@+id/description"
+        android:hint="descriptions"
+        android:layout_width="match_parent"
+        android:layout_below="@id/responses"
+        android:lines="3"
+        android:minLines="1"
+        android:textAlignment="textStart"
+        android:maxLines="4"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingBottom="10dp"/>
+</RelativeLayout>
