@@ -15,7 +15,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Question:"
+                android:text="Title:"
                 android:textSize="25sp"
                 />
 
@@ -24,6 +24,39 @@
         <TableRow>
             <EditText
 
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:minLines="1"
+                android:maxLines="7"
+                android:id="@+id/titleedit"
+                android:scrollbars="vertical"
+                android:gravity="top|left"
+                android:textSize="20sp"
+                android:layout_marginRight="10dp"
+                android:textAlignment="viewStart"
+                android:hint="Enter Title"
+
+                android:layout_span="1" />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question:"
+                android:textSize="25sp"
+                />
+
+
+        </TableRow>
+        <TableRow>
+            <EditText
+                android:id="@+id/descriptionquest"
                 android:layout_width="wrap_content"
                 android:paddingTop="20dp"
                 android:layout_height="wrap_content"
@@ -91,32 +124,7 @@
 
 
         </TableRow>
-        <TableRow>
-            <TextView
-                android:paddingTop="20dp"
-                android:id="@+id/expires"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Expires in:"
-                android:textSize="25sp"
-                android:layout_span="2"
-                android:layout_alignParentRight="true"
-                />
-            <Spinner
-                android:id="@+id/expirespinner"
 
-                android:layout_alignRight="@id/expires"
-                android:background="@android:drawable/btn_dropdown"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:spinnerMode="dropdown"
-                >
-
-            </Spinner>
-
-
-
-        </TableRow>
 
     </TableLayout>
 
