@@ -1,5 +1,6 @@
 package com.askaround.askaround.service;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 import com.askaround.askaround.model.Question;
@@ -14,6 +15,14 @@ import java.util.List;
  * Created by ruraj on 10/1/16.
  */
 public class QuestionService extends AsyncTask<String, Void, Question[]> {
+
+  private Context context;
+  private QuestionCallback callback;
+
+  public QuestionService(Context context, QuestionCallback callback) {
+    this.context = context;
+    this.callback = callback;
+  }
 
   @Override
   protected Question[] doInBackground(String... strings) {
@@ -33,5 +42,6 @@ public class QuestionService extends AsyncTask<String, Void, Question[]> {
 
   @Override
   protected void onPostExecute(Question[] questions) {
+    callback.onQuestionsReceived(questions);
   }
 }
