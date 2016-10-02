@@ -14,6 +14,7 @@ public class Question {
 
   private double lat;
   private double lon;
+  private String formattedAddress;
 
   private Date datePublished;
 
@@ -71,5 +72,9 @@ public class Question {
 
   public void setDatePublished(Date datePublished) {
     this.datePublished = datePublished;
+  }
+
+  public String getFormattedAddress() {
+    return formattedAddress;
   }
 }

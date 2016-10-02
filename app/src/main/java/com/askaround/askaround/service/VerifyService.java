@@ -1,8 +1,10 @@
 package com.askaround.askaround.service;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
+import com.askaround.askaround.activity.OtherQuestionsActivity;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
@@ -46,6 +48,8 @@ public class VerifyService extends AsyncTask<String, Void, Boolean> {
     if (successs) {
       // Hey, we are registered
       // let's go to the main page
+      Intent intent = new Intent(context, OtherQuestionsActivity.class);
+      context.startActivity(intent);
     } else {
 
     }

@@ -11,5 +11,6 @@ public class Urls {
   public static final String VERIFY_URL = "/user/verify";
   public static final String MY_QUESTIONS_URL = "/questions/my";
   public static final String OTHERS_QUESTIONS_URL = "/questions/all";
+  public static final String POST_QUESTION_URL = "/question/new";
 
 }

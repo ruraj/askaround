@@ -99,6 +99,7 @@
                 android:layout_height="wrap_content"
                 android:text="Expires in:"
                 android:textSize="25sp"
+                android:layout_span="2"
                 android:layout_alignParentRight="true"
                 />
             <Spinner
@@ -110,7 +111,6 @@
                 android:layout_height="wrap_content"
                 android:spinnerMode="dropdown"
                 >
-
 
             </Spinner>
 

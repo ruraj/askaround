@@ -1,8 +1,9 @@
-package com.askaround.askaround;
+package com.askaround.askaround.activity;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 
@@ -16,6 +17,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -25,6 +27,8 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import com.askaround.askaround.R;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -83,6 +87,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     mLoginFormView = findViewById(R.id.login_form);
     mProgressView = findViewById(R.id.login_progress);
+
+
+//    MyFirebaseInstanceIDService myFirebaseInstanceIDService = new MyFirebaseInstanceIDService();
+
+    Log.d("LA", "Hi there");
+    Log.d("LA", "Token: " + FirebaseInstanceId.getInstance().getToken());
   }
 
   private void populateAutoComplete() {
@@ -113,18 +123,18 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     // Check for a valid password, if the user entered one.
     if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
-      mPasswordView.setError(getString(R.string.error_invalid_password));
+//      mPasswordView.setError(getString(R.string.error_invalid_password));
       focusView = mPasswordView;
       cancel = true;
     }
 
     // Check for a valid email address.
     if (TextUtils.isEmpty(email)) {
-      mEmailView.setError(getString(R.string.error_field_required));
+//      mEmailView.setError(getString(R.string.error_field_required));
       focusView = mEmailView;
       cancel = true;
     } else if (!isEmailValid(email)) {
-      mEmailView.setError(getString(R.string.error_invalid_email));
+//      mEmailView.setError(getString(R.string.error_invalid_email));
       focusView = mEmailView;
       cancel = true;
     }
@@ -262,7 +272,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
       try {
         // Simulate network access.
-        Thread.sleep(2000);
+        Thread.sleep(1000);
       } catch (InterruptedException e) {
         return false;
       }
@@ -285,9 +295,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
       showProgress(false);
 
       if (success) {
-        finish();
+        Intent intent = new Intent(getApplicationContext(), OtherQuestionsActivity.class);
+        startActivity(intent);
       } else {
-        mPasswordView.setError(getString(R.string.error_incorrect_password));
+//        mPasswordView.setError(getString(R.string.error_incorrect_password));
         mPasswordView.requestFocus();
       }
     }

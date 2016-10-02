@@ -9,8 +9,15 @@ import android.location.LocationManager;
 import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
+import android.util.Log;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Random;
 
 /**
@@ -51,6 +58,25 @@ public class LocationService extends Service implements LocationListener {
   @Override
   public void onProviderDisabled(String s) {
 
+  }
+
+  public String getLocationName(Location location) throws IOException, JSONException {
+    HttpURLConnection connection = (HttpURLConnection) new URL(
+            "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + location.getLatitude() + "," + location.getLongitude()
+    ).openConnection();
+
+    InputStream is = connection.getInputStream();
+    byte[] read = new byte[512];
+    int i;
+    StringBuilder stringBuilder = new StringBuilder();
+    while ( (i = is.read(read)) != -1) {
+      stringBuilder.append(new String(read));
+    }
+
+    JSONObject jsonObject = new JSONObject(stringBuilder.toString());
+    Log.d("umm", jsonObject.toString());
+
+    return jsonObject.getJSONArray("results").getJSONObject(0).getString("formatted_address");
   }
 
   /**
