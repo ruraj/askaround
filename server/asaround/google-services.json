@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "794446860309",
+    "firebase_url": "https://askaround-41eeb.firebaseio.com",
+    "project_id": "askaround-41eeb",
+    "storage_bucket": "askaround-41eeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794446860309:android:0ef888e120dc152e",
+        "android_client_info": {
+          "package_name": "com.askaround.andoid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794446860309-udsqf9rihnunaukj35igrbsfbaf5b3bh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCE7CVEh4yqz_j774hROYvSdIMSVdecf-8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
